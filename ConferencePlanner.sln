@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferencePlanner.Backend", "ConferencePlanner.Backend\ConferencePlanner.Backend.csproj", "{634C6F1E-AACD-47CA-BF0F-F35DCFD0D0C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConferencePlanner.Backend", "ConferencePlanner.Backend\ConferencePlanner.Backend.csproj", "{634C6F1E-AACD-47CA-BF0F-F35DCFD0D0C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferencePlanner.ConferenceDTO", "ConferencePlanner.ConferenceDTO\ConferencePlanner.ConferenceDTO.csproj", "{51EC8808-5C14-46B6-BBDE-2AAC06A6E6B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConferencePlanner.ConferenceDTO", "ConferencePlanner.ConferenceDTO\ConferencePlanner.ConferenceDTO.csproj", "{51EC8808-5C14-46B6-BBDE-2AAC06A6E6B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConferencePlanner.FrontEnd", "ConferencePlanner.FrontEnd\ConferencePlanner.FrontEnd.csproj", "{CDC941AB-CD9C-4643-B9DD-BE80FE7B1480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConferencePlanner.FrontEnd", "ConferencePlanner.FrontEnd\ConferencePlanner.FrontEnd.csproj", "{CDC941AB-CD9C-4643-B9DD-BE80FE7B1480}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9E40F1F-78E9-44A2-97D7-1ADB06E58CC7}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
