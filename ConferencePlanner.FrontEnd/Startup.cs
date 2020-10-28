@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ConferencePlanner.FrontEnd.Data;
+using ConferencePlanner.FrontEnd.HealthChecks;
 using ConferencePlanner.FrontEnd.Middleware;
 using ConferencePlanner.FrontEnd.Services;
 using Microsoft.AspNetCore.Builder;
@@ -43,6 +45,10 @@ namespace ConferencePlanner.FrontEnd
                 });
             });
 
+            services.AddHealthChecks()
+                    .AddCheck<BackendHealthCheck>("backend")
+                    .AddDbContextCheck<IdentityDbContext>();
+
             services.AddSingleton<IAdminService, AdminService>();
         }
 
@@ -72,6 +78,7 @@ namespace ConferencePlanner.FrontEnd
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapHealthChecks("/health");
             });
         }
     }

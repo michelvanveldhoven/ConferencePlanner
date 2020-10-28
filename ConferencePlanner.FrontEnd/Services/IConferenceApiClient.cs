@@ -23,5 +23,7 @@ namespace ConferencePlanner.FrontEnd.Services
         Task AddSessionToAttendeeAsync(string name, int sessionId);
 
         Task RemoveSessionFromAttendeeAsync(string name, int sessionId);
+
+        Task<bool> CheckHealthAsync();
     }
 }

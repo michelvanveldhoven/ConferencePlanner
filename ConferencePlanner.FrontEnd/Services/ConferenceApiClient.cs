@@ -142,5 +142,19 @@ namespace ConferencePlanner.FrontEnd.Services
             var response = await httpClient.DeleteAsync($"/api/attendees/{name}/session/{sessionId}");
             response.EnsureSuccessStatusCode();
         }
+
+        public async Task<bool> CheckHealthAsync()
+        {
+            try
+            {
+                var response = await httpClient.GetStringAsync("/health");
+
+                return string.Equals(response, "Healthy", StringComparison.OrdinalIgnoreCase);
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
