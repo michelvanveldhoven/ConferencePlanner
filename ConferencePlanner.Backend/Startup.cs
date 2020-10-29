@@ -58,9 +58,11 @@ namespace ConferencePlanner.Backend
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
             }
 
-            app.UseHttpsRedirection();
+            // commented for Docker Support
+            // app.UseHttpsRedirection();
 
             app.UseSwagger();
             app.UseSwaggerUI(options =>
